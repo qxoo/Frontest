@@ -1,37 +1,7 @@
 :root {
-  --color-background: #1e1f21;
-  --color-background-component: #18181a; //непрозрачный бг компонента
-  --color-background-dark: #281b1b9b;
-  --color-background-transparent: #0f090c80;
-  --color-background-transparent-40: #0f090c3a;
-  --color-background-gradient: radial-gradient(50% 50% at 50% 50%,
-      rgba(204, 139, 139, 0.48) 0%,
-      rgba(163, 59, 59, 0) 100%); // градинет подсветка
-  --color-background-oncomponent: rgba(255,
-      121,
-      121,
-      0.061); // немного розовый бг на непрозрачном компоненте
-
-  --color-border-pink-gradient: rgba(184, 110, 159, 0.8);
-
+  --color-background: #1D1D1D;
+  --color-background-component: #262626;
   --color-primary: #fff;
-  --color-primary-32: #ffffff52;
-  --color-primary-40: #ffffff66;
-  --color-primary-50: rgba(255, 255, 255, 0.5);
-  --color-primary-80: rgba(255, 255, 255, 0.8);
-  --color-primary-disabled: #b8b8b8;
-
-  --color-secondary: #662525cc;
-  --color-secondary-32: #66252552;
-  --color-secondary-40: #6625251a;
-  --color-secondary-50: #1a111687;
-  --color-secondary-60: #1a1116b3;
-  --color-secondary-80: #662525cc;
-
-  --color-third: #110a11;
-  --color-third-80: #424242;
-
-  --chat-message-bg-me: #702f78;
-  --chat-message-bg-companion: #262629;
-  --chat-list-bg: #0f090c33;
+  --color-secondary: #4D4D4D;
+  --color-red: rgb(250, 114, 114);
 }

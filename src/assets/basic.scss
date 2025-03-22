@@ -1,15 +1,11 @@
 html,
 body {
-  // min-height: 100%;
   min-width: 100%;
 }
 
 body {
   font-family: Inter;
   background: var(--color-background);
-  background-image: url('@/public/assets/img/background.png');
-  background-repeat: no-repeat;
-  background-size: 100% auto;
   scroll-behavior: smooth;
 }
 
