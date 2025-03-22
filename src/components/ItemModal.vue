@@ -53,7 +53,7 @@ function closeModal() {
 }
 
 function updateQuantity() {
-  if (props.item) {
+  if (props.item && localQuantity.value !== null) {
     store.updateQuantity(props.item.id, localQuantity.value)
   }
 }

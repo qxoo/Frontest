@@ -1,5 +1,5 @@
 <template>
-  <div class="page-footer">
+  <div v-if="isVisible" class="page-footer">
     <p class="page-footer__text">
       made by
       <a class="page-footer__text-link" href="https://t.me/cannedbread" target="_blank"> qxoo</a>
@@ -7,16 +7,19 @@
       voluptas vero iusto cum corporis cupiditate. Architecto eaque enim expedita harum tempora
       perspiciatis facilis eos eveniet deserunt.
     </p>
-    <button
-      class="page-footer__close"
-      @click="$event.currentTarget.closest('.page-footer').style.display = 'none'"
-    >
-      ×
-    </button>
+    <button class="page-footer__close" @click="hideFooter">×</button>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const isVisible = ref(true)
+
+function hideFooter() {
+  isVisible.value = false
+}
+</script>
 
 <style lang="scss">
 .page-footer {

@@ -9,11 +9,11 @@
         @dragover.prevent
         @dragenter="onDragEnter(cell)"
         @dragleave="onDragLeave(cell)"
-        @drop="onDrop(cell)"
+        @drop="onDrop($event, cell)"
       >
         <InventoryItem
           v-if="getItemByCell(cell)"
-          :item="getItemByCell(cell)"
+          :item="getItemByCell(cell)!"
           @select="selectItem"
         />
       </div>
@@ -51,7 +51,7 @@ const selectItem = (item: InventoryItemType) => {
   selectedItem.value = item
 }
 
-const onDrop = (cell: string) => {
+const onDrop = (event: DragEvent, cell: string) => {
   const itemId = event.dataTransfer?.getData('text/plain')
   if (itemId) {
     store.moveItem(itemId, cell)
@@ -147,7 +147,7 @@ const deleteSelectedItem = (itemId: string) => {
       }
     }
     .inventory_grid__cell.drag-over {
-      border: 2px dashed var(--color-secondary);
+      border: 2px dashed var(--color-red);
     }
   }
 }
